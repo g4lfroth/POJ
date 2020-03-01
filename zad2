@@ -1,1 +1,30 @@
+// autor jakub.jandula s6343
+package com.company;
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        // Program liczacy BMI
+
+        //program pobiera dane od uzytkownika nastepnie oblicza BMI i informuje uzytkownika o jego stanie,
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input weight in kilogram: ");
+        double weight = sc.nextDouble();
+        System.out.println("Input height in meters: ");
+        double height = sc.nextDouble();
+        double BMI = weight / (height * height);
+        System.out.println("The Body Mass Index (BMI) is " + BMI + " kg/m2");
+        if (BMI < 15) System.out.println("Very severely underweight ");
+        else if (BMI > 15 && BMI < 15) System.out.println("Severely underweight");
+        else if (BMI > 16 && BMI < 18.5) System.out.println("Underweight");
+        else if (BMI > 18.5 && BMI < 25) System.out.println("Normal (healthy weight)");
+        else if (BMI > 25 && BMI < 30) System.out.println("Overweight ");
+        else if (BMI > 30 && BMI < 35) System.out.println("Obese Class I (Moderately obese) ");
+        else if (BMI > 35 && BMI < 40) System.out.println("Obese Class II (Severely obese)");
+        else if (BMI > 40) System.out.println("Obese Class III (Very severely obese) ");
+    }
+}
