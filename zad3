@@ -1,1 +1,29 @@
+// autor: Jakub Janduła s6343
+package com.company;
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("The program counts the daily calory needs");
+        System.out.println("Please press 1 if you are a man and 2 if you are a woman");
+        double gender = sc.nextDouble();
+        System.out.println("Please input you weight in kilograms");
+        double weight = sc.nextDouble();
+        System.out.println("Please input your height in centimeters");
+        double height = sc.nextDouble();
+        System.out.println("Please input your age");
+        double age = sc.nextDouble();
+        double PPMw = 665.1 + (9.563 * weight) + (1.85 * height) - (4.676 * age);
+        double PPMm = 66.5 + (13.75 * weight) + (5.003 * height) - (6.775 * age);
+        if (gender == 1) System.out.println("Your PPM is " + PPMm + " kcal");
+        else System.out.println("Your PPM is " + PPMw + " kcal");
+
+
+
+    }
+}
