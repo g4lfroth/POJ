@@ -1,1 +1,28 @@
+//autor Jakub Janduła s6343
+package com.company;
 
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many rows would you like?");
+        int nr_of_rows = sc.nextInt();
+
+        System.out.println("Here is your piramid:");
+
+
+        for (int i = 0; i <= nr_of_rows; i++) {
+            int alphabet = 97; // depending on the value of this program starts printing form a different ASCII sign
+            for (int j = nr_of_rows; j > i; j--) { // prints spaces to center the pyramid
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= i; k++) {
+                // prints the letters of the alphabet adding more depending on the number of rows
+                System.out.print((char) (alphabet + k) + " ");
+
+            }
+            System.out.println();
+        }
+    }
+}
